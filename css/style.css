@@ -1,0 +1,126 @@
+* {
+    font-family: "游ゴシック";
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    font-size: 18px;
+    font-family: Verdana, sans-serif;
+    width: 500px;
+    margin: auto;
+}
+
+.sub_header {
+    padding: 20px 10px 50px;
+}
+
+.list_count {
+    float: left;
+}
+
+.all_del {
+    float: right;
+}
+
+.all_select {
+    float: right;
+    padding-right: 10px;
+}
+
+.main {
+    clear: both;
+}
+
+.del_mark {
+    font-size: 14px;
+    color: rgb(0, 0, 200);
+    cursor: pointer;
+}
+
+.checked {
+    color: rgb(200, 200, 200);
+    text-decoration: line-through;
+}
+
+.nav {
+    list-style: none;
+    overflow: hidden;
+}
+
+li.navItem {
+    width: 200px;
+    background-color: opacity;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 2px;
+    border: double 5px #4ec4d3;
+    text-align: center;
+}
+
+li.navItem a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 20px;
+}
+
+li.navItem a:hover {
+    cursor: pointer;
+    color: #4ec4d3;
+}
+
+input.text {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 36px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+input.button {
+    padding: 5px 20px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    background-color: beige;
+    margin-top: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px;
+}
+
+button.button {
+    padding: 5px 20px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    background-color: beige;
+    margin-top: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px;
+}
+
+input.button:active {
+    box-shadow: none;
+    position: relative;
+    top: 3px;
+}
+
+input.button:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+button.button:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+button.button:active {
+    box-shadow: none;
+    position: relative;
+    top: 3px;
+}
