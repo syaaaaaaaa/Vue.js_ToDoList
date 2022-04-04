@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>ToDoリスト</title>
+</head>
+
+<body>
+    <h1>ToDoリスト</h1>
+    
+    <div class="container">
+        <div id="result">
+            <hr>
+            <div class="sub_header">
+                <div class="list_count">
+                    ToDoリスト数：{{ listCount.length }} / {{ lists.length }}
+                </div>
+                <div class="all_del">
+                    <!-- 一括削除ボタン -->
+                    <!-- @clickで一括削除ボタン押下時のイベントを設定 -->
+                    <button type="button" @click="allDel" class="button">一括削除</button>
+                </div>
+            </div>
+            <div class="main">
+                <!-- @submit.preventで追加ボタン押下時のイベントを設定 -->
+                <!-- 「prevent」で他ページへの遷移を防止 -->
+                <form @submit.prevent="addList">
+                    <div>
+                        <!-- 入力した値を「v-model="newList"」でVue.jsのdataで設定した値と紐づけ -->
+                        <input type="text" v-model="newList" class="text">
+                        <input type="submit" value="追加" class="button">
+                    </div>
+                </form>
+                <div>
+                    <ul>
+                        <!-- v-for="list in lists"でループ -->
+                        <!-- 「index」でループの番号を取得 -->
+                        <li v-for="(list, index) in lists">
+                            <!-- チェックボックスのチェック有無を「v-model="list.isChecked"」でVue.jsのdataで設定した値と紐づけ -->
+                            <input type="checkbox" name="checkbox" v-model="list.isChecked">
+                            <!-- 「:class」は「v-bind:class」と同じ -->
+                            <!-- 「:class="{checked: list.isChecked}"」でdataの「list.isChecked」がtrueだったら「checked」クラス要素を付与 -->
+                            <span :class="{checked: list.isChecked}">{{ list.title }}</span>
+                            <span class="del_mark" @click="delList(index)">[x]</span>
+                        </li>
+                    </ul>
+                    <img v-bind:src="gif">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
